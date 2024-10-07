@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-hello-app
-        image: tutd3/go-hellow:7baf6537f1df9cfb59eb5c1bb5a69f52337ae17f
+        image: tutd3/go-hellow:5380856e274e84fcc7577e11a85bb84dfbfcb54e
         ports:
         - containerPort: 3060
