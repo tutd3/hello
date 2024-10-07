@@ -1,0 +1,21 @@
+######create helm yaml to run that image to minikube
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-hellow-app
+  namespace: hellow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-hello-app
+  template:
+    metadata:
+      labels:
+        app: go-hello-app
+    spec:
+      containers:
+      - name: go-hello-app
+        image: tutd3/test1:go-hellow
+        ports:
+        - containerPort: 3060
