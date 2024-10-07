@@ -28,3 +28,9 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Update deployment.yaml
+        run: |
+          cd dev
+          pwd
+          ls dev
