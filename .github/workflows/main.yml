@@ -36,3 +36,6 @@ jobs:
           ls
           sed -i 's|image: .*|image: tutd3/go-hellow:${{ github.sha }}|' deployment.yaml
           cat deployment.yaml
+          git add deployment.yaml
+          git commit -m "Update deployment.yaml with new image version"
+          git push
