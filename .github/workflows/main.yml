@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USER }}
   DOCKERHUB_KEY: ${{ secrets.DOCKER_PASS }}
