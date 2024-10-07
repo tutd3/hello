@@ -34,3 +34,5 @@ jobs:
           cd /home/runner/work/hello/hello/dev
           pwd
           ls
+          sed -i 's|image: .*|image: tutd3/go-hellow:${{ github.sha }}|' deployment.yaml
+          cat deployment.yaml
