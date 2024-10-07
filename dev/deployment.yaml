@@ -19,3 +19,22 @@ spec:
         image: tutd3/go-hellow:9a128b0c904a7824bb19f5319bd80e065c4bff22
         ports:
         - containerPort: 3060
+        livenessProbe:
+          tcpSocket:
+            port: 3060
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 3060
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          failureThreshold: 3
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
