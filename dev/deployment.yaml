@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: go-hello-app
-        image: tutd3/go-hellow:9a128b0c904a7824bb19f5319bd80e065c4bff22
+        image: tutd3/go-hellow:3b2a4cea21047089d079bdc9f79c769ebc193f29
         ports:
         - containerPort: 3060
         livenessProbe:
