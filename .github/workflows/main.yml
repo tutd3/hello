@@ -31,6 +31,6 @@ jobs:
 
       - name: Update deployment.yaml
         run: |
-          cd dev
+          cd /home/runner/work/hello/hello/dev
           pwd
-          ls dev
+          ls
