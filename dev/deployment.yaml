@@ -38,3 +38,17 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-hellow-app
+  namespace: hellow
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 3060
+    protocol: TCP
+  selector:
+    app: go-hello-app
