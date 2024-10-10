@@ -18,16 +18,16 @@ spec:
       - name: go-hello-app
         image: tutd3/go-hellow:ee91a4e4edd15fd85bb6cf763264cb870dae28a4
         ports:
-        - containerPort: 3060
+        - containerPort: 8080
         livenessProbe:
           tcpSocket:
-            port: 3060
+            port: 8080
           initialDelaySeconds: 30
           periodSeconds: 10
           failureThreshold: 3
         readinessProbe:
           tcpSocket:
-            port: 3060
+            port: 8080
           initialDelaySeconds: 5
           periodSeconds: 5
           failureThreshold: 3
@@ -48,7 +48,7 @@ spec:
   type: ClusterIP
   ports:
   - port: 80
-    targetPort: 3060
+    targetPort: 8080
     protocol: TCP
   selector:
     app: go-hello-app
